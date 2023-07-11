@@ -2,23 +2,94 @@
   font-family: "Rubik", sans-serif;
   --Light-red-work: hsl(15, 100%, 70%);
   --blue: hsl(246, 80%, 60%);
-  --Light-red-work: hsl(15, 100%, 70%)
-  --Soft-blue-play: hsl(195, 74%, 62%)
-  --Light-red-study: hsl(348, 100%, 68%)
-  --Lime-green-exercise: hsl(145, 58%, 55%)
-  --Violet-social: hsl(264, 64%, 52%)
-  --Soft-orange-self-care: hsl(43, 84%, 65%)
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--Very-dark-blue);
+}
+
+input[type="radio"] {
+  appearance: none;
+  visibility: hidden;
 }
 
 .round {
   border-radius: 0.5rem;
+}
+.round-sm {
+  border-radius: 0.25rem;
+}
+
+.round-full {
+  border-radius: 100vw;
+}
+
+.border-white {
+  border: 3px solid white;
+}
+
+.w-1 {
+  width: 5rem;
+}
+
+.p-1 {
+  padding: 1rem;
 }
 
 .blue {
   background: var(--blue);
 }
 
-.picture {
-  border-radius: 50%;
+.filter {
+  color: var(--Pale-Blue);
+}
+.filter:has(input[type="radio"]:checked) {
+  color: white;
 }
 
+.grey {
+  color: var(--Pale-Blue);
+  font-size: 12px;
+}
+
+.name {
+  font-size: 20px;
+  color: white;
+}
+
+.background {
+  background-color: var(--Dark-blue);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+.subject {
+  color: white;
+  font-weight: 400;
+}
+
+.time {
+  color: white;
+  font-weight: 300;
+}
+
+.before {
+  color: var(--Pale-Blue);
+  font-weight: 300;
+}

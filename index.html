@@ -17,32 +17,44 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="app">
       <section class="start">
-        <div class="round blue">
-          <img src="./images/image-jeremy.png" alt="Jeremy" class="picture" />
+        <div class="round blue p-1">
+          <img
+            src="./images/image-jeremy.png"
+            alt="Jeremy"
+            class="round-full border-white w-1"
+          />
+          <div class="grey">Report for</div>
+          <div class="name">Jeremy Robson</div>
         </div>
-        <div class="round"></div>
-        <section class="dashboard">
-          <div time-table>
-            <div class="img">
-              <img
-                src="./images/icon-work.svg"
-                alt="icon-work"
-                class="icon-img"
-              />
-            </div>
-            <div class="details">
-              <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
-              <p class="subject">Work</p>
-              <h2 class="time">32hrs</h2>
-              <p class="before">Last Week-36hrs</p>
-            </div>
-          </div>
-        </section>
+
+        <div class="p-1 background">
+          <label class="filter"
+            >Daily
+            <input type="radio" name="options" value="daily" checked />
+          </label>
+          <label class="filter"
+            >Weekly
+            <input type="radio" name="options" value="weekly" />
+          </label>
+          <label class="filter"
+            >Monthly
+            <input type="radio" name="options" value="monthly" />
+          </label>
+        </div>
+      </section>
+      <section class="data data__work">
+        <div class="details background round">
+          <img src="./images/icon-ellipsis.svg" alt="" class="ellipsis" />
+          <h2 class="subject">Work</h2>
+          <p class="time">32hrs</p>
+          <p class="before">Last Week-36hrs</p>
+        </div>
       </section>
     </main>
   </body>
