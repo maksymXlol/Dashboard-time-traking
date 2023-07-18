@@ -2,7 +2,6 @@
   font-family: "Rubik", sans-serif;
   --Light-red-work: hsl(15, 100%, 70%);
   --blue: hsl(246, 80%, 60%);
-  --Light-red-work: hsl(15, 100%, 70%);
   --Soft-blue-play: hsl(195, 74%, 62%);
   --Light-red-study: hsl(348, 100%, 68%);
   --Lime-green-exercise: hsl(145, 58%, 55%);
@@ -26,10 +25,10 @@ input[type="radio"] {
 }
 
 .round {
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 .round-sm {
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .round-full {
@@ -41,15 +40,41 @@ input[type="radio"] {
 }
 
 .w-1 {
+  width: 4rem;
+}
+.w-2 {
   width: 5rem;
 }
 
 .p-1 {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .blue {
   background: var(--blue);
+}
+
+.background {
+  background-color: var(--Dark-blue);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.app {
+  display: grid;
+  gap: 1rem;
+  width: calc(100% - 2rem);
+  margin: 2rem;
+  max-width: 20rem;
 }
 
 .filter {
@@ -59,9 +84,46 @@ input[type="radio"] {
   color: white;
 }
 
-.grey {
+.info {
+  padding-top: 3rem;
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 1rem;
+  background-size: 25%;
+}
+
+.info[data-info="Work"] {
+  background-color: var(--Light-red-work);
+  background-image: url(./images/icon-work.svg);
+}
+
+.info[data-info="Play"] {
+  background-color: var(--Soft-blue-play);
+  background-image: url(./images/icon-play.svg);
+}
+
+.info[data-info="Study"] {
+  background-color: var(--Light-red-study);
+  background-image: url(./images/icon-study.svg);
+}
+
+.info[data-info="Exercise"] {
+  background-color: var(--Lime-green-exercise);
+  background-image: url(./images/icon-exercise.svg);
+}
+
+.info[data-info="Social"] {
+  background-color: var(--Violet-social);
+  background-image: url(./images/icon-social.svg);
+}
+
+.info[data-info="Self Care"] {
+  background-color: var(--Soft-orange-self-care);
+  background-image: url(./images/icon-self-care.svg);
+}
+
+.text-dim {
   color: var(--Pale-Blue);
-  font-size: 12px;
+  font-size: 0.8rem;
 }
 
 .name {
@@ -69,27 +131,17 @@ input[type="radio"] {
   color: white;
 }
 
-.background {
-  background-color: var(--Dark-blue);
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-}
-
 .details {
-  margin-top: 10px;
 }
 
 .subject {
   color: white;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .time {
   color: white;
   font-weight: 300;
-}
-
-.before {
-  color: var(--Pale-Blue);
-  font-weight: 300;
+  font-size: 2.2rem;
 }
