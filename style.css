@@ -77,6 +77,14 @@ input[type="radio"] {
   max-width: 20rem;
 }
 
+@media screen and (min-width: 545px) {
+  .app {
+    width: 100%;
+    max-width: 80%;
+    font-size: 24px;
+  }
+}
+
 .filter {
   color: var(--Pale-Blue);
 }
@@ -131,7 +139,22 @@ input[type="radio"] {
   color: white;
 }
 
-.details {
+@media screen and (min-width: 545px) {
+  .name {
+    font-size: 27px;
+  }
+}
+
+@media screen and (min-width: 545px) {
+  .report {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 545px) {
+  .img {
+    width: 95px;
+  }
 }
 
 .subject {
