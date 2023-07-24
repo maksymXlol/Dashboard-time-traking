@@ -11,6 +11,8 @@
   --Dark-blue: hsl(235, 46%, 20%);
   --Desaturated-blue: hsl(235, 45%, 61%);
   --Pale-Blue: hsl(236, 100%, 87%);
+
+  --w-tablet: 768px;
 }
 
 body {
@@ -22,6 +24,7 @@ body {
 input[type="radio"] {
   appearance: none;
   visibility: hidden;
+  position: absolute;
 }
 
 .round {
@@ -65,6 +68,13 @@ input[type="radio"] {
   gap: 1rem;
 }
 
+@media screen and (min-width: 1240px) {
+  .flex {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -77,11 +87,22 @@ input[type="radio"] {
   max-width: 20rem;
 }
 
-@media screen and (min-width: 545px) {
+@media screen and (min-width: 768px) {
   .app {
     width: 100%;
-    max-width: 80%;
+    max-width: 750px;
     font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .app {
+    max-width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(0, 1fr);
+  }
+  .start {
+    grid-row: span 2;
   }
 }
 
@@ -127,6 +148,16 @@ input[type="radio"] {
 .info[data-info="Self Care"] {
   background-color: var(--Soft-orange-self-care);
   background-image: url(./images/icon-self-care.svg);
+}
+
+.details {
+  position: relative;
+}
+
+.ellipsis {
+  position: absolute;
+  right: 1.5rem;
+  top: 2rem;
 }
 
 .text-dim {
